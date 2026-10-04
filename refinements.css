@@ -1,0 +1,68 @@
+/* Portraits and readable, responsive portfolio details. */
+.player-profile{position:absolute;right:17%;top:148px;width:210px;margin:0;padding:9px;background:#17232ddb;border:1px solid #90b0a44d;border-radius:9px;box-shadow:0 18px 55px #0003;transform:rotate(3deg);pointer-events:none}
+.player-profile img{display:block;width:100%;height:auto;border-radius:4px}
+.player-profile figcaption{padding:15px 9px 9px;display:flex;flex-direction:column;gap:5px}
+.player-profile figcaption>span{font:11px/1.5 var(--display);letter-spacing:.1em;color:#a9bbb9}
+.player-profile strong{font-size:19px;font-weight:500}
+.player-profile em{font-style:normal;color:var(--lime);margin-left:7px}
+.resume-identity{display:flex;align-items:center;gap:28px}
+.resume-photo{width:138px;height:138px;object-fit:cover;border-radius:8px;flex:none;border:1px solid #90b0a44d}
+.resume-intro{grid-template-columns:1.65fr 1fr;gap:40px}
+.resume-intro h1{font-size:44px;white-space:nowrap}
+.resume-intro .eyebrow{font-size:11px}
+.resume-intro p{font-size:18px}
+.detail-photo{float:right;margin:0 0 20px 22px;border-radius:8px;border:1px solid var(--border)}
+.project-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.1fr;gap:27px}
+.project-card.featured .project-copy{display:flex;flex-direction:column;align-items:flex-start}
+.project-card.featured .project-copy p{margin-bottom:20px}
+.project-art{width:100%;height:100%;min-height:200px;object-fit:cover;object-position:center;border-radius:4px;background:#1d2630}
+.project-card p,.skill-group p{font-size:16px}
+.project-card .station-tags{margin-top:8px}
+.project-card.featured .station-tags{margin-top:auto}
+.project-card .detail-links{gap:10px;margin-top:0}
+.project-card .detail-links a{font-size:14px;padding:8px 10px}
+.portfolio-preview{width:100%;height:auto;border-radius:6px;margin:18px 0 2px;border:1px solid var(--border)}
+.portfolio-caption{font-size:13px;color:var(--muted);margin:0 0 18px}
+.graduation-card{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:24px;background:linear-gradient(105deg,#1b302d,#18212b)}
+.demo-cover{display:block;position:relative;align-self:stretch;min-height:210px}.demo-cover img{width:100%;height:100%;object-fit:cover;border-radius:4px}.demo-cover>span{position:absolute;bottom:12px;left:12px;font:11px var(--display);color:#fff;background:#0d151fd9;padding:7px 10px;border:1px solid #ffffff2b;border-radius:3px}
+.graduation-card h3{margin-top:10px}.graduation-card .station-tags{margin:16px 0}.graduation-card .graduation-links{align-items:flex-start}
+.graduation-card p{margin-bottom:0}.graduation-links{flex:none;display:flex;flex-direction:column;gap:12px;align-items:center}.graduation-links>span{font-size:12px;color:var(--muted)}
+.section-note{font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:20px}.section-heading>.text-link{font-size:13px;white-space:normal}
+.archive-art{width:calc(100% + 48px);height:205px;object-fit:cover;margin:-24px -24px 22px;border-radius:6px 6px 0 0}.contain-art{object-fit:contain;background:#e9eeea}.archive-card button{margin-top:auto}
+.paper-status{font-size:12px}.section-heading .eyebrow{font-size:12px}
+.story-panel.compact .station-description{font-size:16px}
+.station-nav small{font-size:11px}.brand-caption{font-size:11px}
+.controls-hint,.controls-hint .pause-control{font-size:13px}.controls-hint kbd{font-size:12px}
+.bottom-note{font-size:12px}.bottom-note>span:last-child{font-size:12px}
+.availability{font-size:13px}.station-tags span{font-size:12px}
+.resume-summary .button,.text-link{white-space:nowrap}
+.project-card button:hover,.detail-links a:hover,.text-link:hover{color:#e2ffd0}
+@media(max-width:1100px){.player-profile{right:14%;width:184px}.resume-intro{grid-template-columns:1fr}.resume-summary{padding-left:166px}.resume-identity{gap:28px}.resume-summary .link-row{margin-top:18px}}
+@media(max-height:840px) and (min-width:801px){.player-profile{top:109px;width:170px}.player-profile figcaption{padding:10px 7px 5px}.story-panel{top:67px}.station-description{font-size:15px}}
+@media(max-width:800px){
+ .player-profile{top:112px;right:30px;width:110px;padding:4px;border-radius:7px;transform:rotate(3deg)}.player-profile figcaption{display:none}
+ .story-panel{max-width:88%}.story-panel h1{font-size:56px;max-width:calc(100vw - 150px)}
+ .story-panel.compact h1{max-width:100%}.station-description,.story-panel.compact .station-description{font-size:15px;max-width:100%;line-height:1.75}
+ .station-subtitle{font-size:14px}.station-tags span{font-size:11px}.story-action{font-size:14px}.availability{font-size:12px}
+ .brand-caption{font-size:9px}.button{font-size:14px}.game-topline{font-size:10px}
+ .station-nav button{font-size:13px;padding:13px 0;gap:4px}.station-nav small{display:none}.station-number{font-size:12px}
+ .hint-mobile,.controls-hint .pause-control{font-size:12px}.controls-hint{font-size:0}
+ .bottom-note{font-size:10px}.bottom-note>span:last-child{font-size:10px}
+ .resume-intro{gap:25px}.resume-summary{padding-left:0}.resume-intro h1{font-size:36px;margin:10px 0 12px;white-space:normal}.resume-intro h1 em{margin-left:0;display:block}
+ .resume-identity{align-items:flex-start;gap:20px}.resume-photo{width:110px;height:110px;margin-top:5px}.resume-intro .eyebrow{font-size:10px}.resume-intro p{font-size:16px}
+ .project-card.featured{grid-template-columns:1fr;gap:20px}.project-art{min-height:0;max-height:300px;aspect-ratio:16/9}.project-card.featured .detail-links{margin-top:18px}
+ .graduation-card{grid-template-columns:1fr;align-items:flex-start}.demo-cover{min-height:0;aspect-ratio:16/9}.graduation-links{align-items:flex-start}.archive-art{width:calc(100% + 40px);margin:-20px -20px 20px}
+ .detail-photo{width:78px;height:78px;margin-left:15px}
+}
+@media(max-width:480px){
+ .game-view{min-height:740px}.story-panel{left:24px;top:78px;width:calc(100% - 48px);max-width:none}
+ .story-panel h1{font-size:clamp(42px,13.5vw,55px);max-width:calc(100vw - 140px);margin:15px 0 16px}
+ .player-profile{top:119px;right:24px;width:90px}.story-panel.compact h1{font-size:36px;max-width:100%}
+ .station-description{font-size:15px}.station-subtitle{font-size:13px;letter-spacing:0}.station-tags{gap:6px}
+ .brand-caption{display:none}.brand{font-size:16px}.brand-mark{font-size:29px}.header-actions{gap:0}.button{gap:6px}
+ .game-topline{font-size:9px}.resume-view{padding-left:22px;padding-right:22px}.resume-photo{width:90px;height:90px}.resume-identity{gap:17px}.resume-intro h1{font-size:31px}
+ .resume-intro .eyebrow{font-size:9px}.resume-intro p{font-size:15px}.resume-summary p{font-size:16px}.station-nav button{font-size:12px}
+ .project-card{padding:21px}.detail-metrics span{font-size:12px}.dialog-body h2{font-size:24px}
+ .archive-art{width:calc(100% + 42px);margin:-21px -21px 21px}
+}
+@media print{.resume-summary{padding-left:0}.resume-identity{gap:25px}.resume-photo{width:100px;height:100px}.project-art{max-height:180px}.project-card{background:none}.project-index{color:#333!important}.project-card p{font-size:12px}}

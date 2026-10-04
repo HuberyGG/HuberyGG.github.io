@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10151f">
+  <title>Hubery · 朱果 | HCI × AI × Games</title>
+  <meta name="description" content="朱果（Hubery）的交互式个人作品集。探索 HCI、语音 AI、Unity / VR 与游戏项目，也可一键阅读完整简历。">
+  <meta property="og:title" content="Hubery · HCI × AI × Games"><meta property="og:description" content="玩一小段游戏，认识一位连接人、AI 与游戏的研究者和开发者。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310151f'/%3E%3Cpath d='M8 8v16m16-16v16M8 16h16' stroke='%23bdfc8d' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="refinements.css">
+  <script src="content.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#resume" id="skip-link">直接阅读个人简历</a>
+<header class="topbar">
+  <a class="brand" href="#play" aria-label="Hubery 游戏主页"><span class="brand-mark">h<span>＋</span></span><span>HUBERY<span class="brand-caption">A PLAYABLE PORTFOLIO</span></span></a>
+  <div class="header-center"><span class="tiny-cross">✳</span> HCI <span>×</span> AI <span>×</span> GAMES</div>
+  <nav class="header-actions" aria-label="页面模式">
+    <button id="mode-toggle" class="button button-light"><span class="doc-icon" aria-hidden="true">▤</span><span id="mode-label">一键看简历</span></button>
+    <a class="header-contact" href="mailto:guo176797@gmail.com">联系我</a>
+  </nav>
+</header>
+<main>
+<section id="play" class="game-view is-intro" aria-label="互动作品集">
+  <div class="world-backdrop" aria-hidden="true"></div>
+  <canvas id="world" tabindex="0" aria-label="探索游戏。左右方向键或 A D 移动，空格或 W 跳跃，E 查看当前站点详情。也可点击底部站点，或选择一键看简历。"></canvas>
+  <div class="game-topline"><span><i></i> PORTFOLIO WORLD <span class="muted">/ 2026</span></span><span class="session-label">RESEARCHER. BUILDER. PLAYER.</span></div>
+  <aside class="story-panel" id="story-panel" aria-label="当前站点介绍">
+    <div class="eyebrow" id="station-eyebrow">01 / HELLO, WORLD</div>
+    <h1 id="station-title">Hi, I'm<br><em>Hubery.</em></h1>
+    <p class="station-subtitle" id="station-subtitle">朱果 · 研究者 / 开发者 / 玩家</p>
+    <p class="station-description" id="station-description">探索人、AI 与游戏之间的可能性。<br>把研究问题，做成可以体验的交互。</p>
+    <div class="station-tags" id="station-tags"><span>HCI</span><span>AI AGENT</span><span>UNITY / VR</span></div>
+    <button class="story-action" id="story-action">认识我 <span aria-hidden="true">[ E ]</span></button>
+    <div class="availability"><span class="availability-line"></span> 寻找 AI / 游戏方向实习</div>
+  </aside>
+  <figure class="player-profile" id="player-profile"><img src="assets/hubery.jpg" alt="朱果 Hubery 的个人照片" width="320" height="320" fetchpriority="high"><figcaption><span>MEET THE PLAYER</span><strong>朱果 <em>Hubery</em></strong><span>HCI · AI · GAMES</span></figcaption></figure>
+  <div class="game-status" aria-label="探索进度"><span class="coin-symbol" aria-hidden="true"></span><span id="coin-count">00</span><span class="status-divider">/</span><span id="coin-total">20</span><span class="status-caption">IDEAS COLLECTED</span><button id="restart" aria-label="重新开始探索" title="重新开始">↺</button></div>
+  <div class="world-label" aria-hidden="true">THE HUMAN–AI PLAYGROUND</div>
+  <div id="game-toast" class="game-toast" role="status" aria-live="polite"></div>
+  <div class="touch-controls" aria-label="触屏游戏操作"><div><button data-control="left" aria-label="向左移动">◀</button><button data-control="right" aria-label="向右移动">▶</button></div><button data-control="jump" aria-label="跳跃">跳跃</button></div>
+  <div class="game-footer">
+    <div class="controls-hint"><span class="control-keys"><kbd>A</kbd><kbd>D</kbd></span> 移动 <span class="control-keys"><kbd>SPACE</kbd></span> 跳跃 <span class="hint-detail"><kbd>E</kbd> 查看详情</span><span class="hint-mobile">按住方向键移动，点按跳跃</span><button id="pause-game" class="pause-control" aria-label="暂停游戏">暂停</button></div>
+    <nav class="station-nav" aria-label="直接跳转站点">
+      <button data-station="0" class="active" aria-current="step"><span class="station-number">01</span><span>关于我<small>HELLO</small></span><i></i></button>
+      <button data-station="1"><span class="station-number">02</span><span>人机交互<small>HCI LAB</small></span><i></i></button>
+      <button data-station="2"><span class="station-number">03</span><span>语音与 AI<small>AI LAB</small></span><i></i></button>
+      <button data-station="3"><span class="station-number">04</span><span>游戏制作<small>GAME STUDIO</small></span><i></i></button>
+      <button data-station="4"><span class="station-number">05</span><span>保持联系<small>NEXT CHAPTER</small></span><i></i></button>
+    </nav>
+    <div class="bottom-note"><span>收集灵感，认识我。<span class="desktop-note">点击站点也可直接抵达。</span></span><span id="visited-count">EXPLORED 01 / 05</span></div>
+  </div>
+</section>
+<section id="resume" class="resume-view" hidden tabindex="-1" aria-label="个人简历">
+  <div class="resume-intro"><div class="resume-identity"><img class="resume-photo" src="assets/hubery.jpg" alt="朱果 Hubery 的个人照片" width="144" height="144"><div><span class="eyebrow">THE PERSON BEHIND THE PIXELS</span><h1>朱果 <em>Hubery.</em></h1><p>在 AI 的能力与人的体验之间，<br>构建可用、可玩的交互。</p></div></div><div class="resume-summary"><span class="eyebrow">OPEN TO INTERNSHIPS</span><p>游戏 AI / Agent · AI 应用开发<br>Unity / VR · 技术产品</p><div class="link-row"><a class="button button-light" href="assets/Hubery-CV.pdf" target="_blank" rel="noopener">查看 PDF 简历</a><a class="text-link" href="mailto:guo176797@gmail.com">联系我</a></div></div></div>
+  <div id="resume-content"><section class="resume-section"><div class="section-heading"><span class="eyebrow">01 / ABOUT</span><h2>关于我</h2></div><div class="section-content"><p>香港中文大学（深圳）人工智能 MPhil 在读，聚焦 HCI、语音模型评测与生成。我把用户研究与系统开发连接起来，用 Unity / Quest 3 构建交互体验，也参与 AI 模型研究、数据构建与评测。</p><p>寻找游戏 AI / Agent 开发及 AI 应用方向实习。日常实习优先，近期可入职。</p><div class="link-row"><a class="text-link" href="https://github.com/HuberyGG" target="_blank" rel="noopener noreferrer">GitHub</a><a class="text-link" href="https://scholar.google.com/citations?user=Okxt8dgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a class="text-link" href="https://space.bilibili.com/35953087" target="_blank" rel="noopener noreferrer">B 站 · Hu6ery</a></div></div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">02 / SELECTED WORK</span><h2>精选项目</h2></div><div class="section-content project-grid">
+<article class="project-card"><span class="project-index">01 / HCI + VR</span><h3>牙科焦虑干预 VR</h3><p>结合用户研究与参与式设计，用 Unity / Quest 3 实现 5 类事件触发场景，开展 24 人随机研究。</p><div class="station-tags"><span>UNITY / QUEST 3</span><span>USER STUDY</span></div><button data-detail="hci">项目过程与研究结果</button></article>
+<article class="project-card"><span class="project-index">02 / SPEECH EVALUATION</span><h3>MTalk-Bench</h3><p>参与构建覆盖 9 类场景、270 段对话的多轮语音评测数据，分析模型表现与 LLM 评审偏差。</p><div class="station-tags"><span>BENCHMARK</span><span>ARENA / RUBRICS</span></div><button data-detail="ai">查看评测与生成研究</button></article>
+<article class="project-card"><span class="project-index">03 / GENERATIVE AUDIO</span><h3>MedTTS</h3><p>面向可控病理语音生成，参与数据构建、自动质检与模型研究；生成 25 小时、6,200 条语音。</p><div class="station-tags"><span>PYTORCH</span><span>FLOW MATCHING</span></div><button data-detail="ai">查看语音生成研究</button></article>
+<article class="project-card"><span class="project-index">04 / INDEPENDENT GAME</span><h3>Esecret</h3><p>Game Off 2024 独立参赛作品。将 ESC 设置与游戏世界变化关联，完成从关卡白盒到打包测试。</p><div class="station-tags"><span>UNITY / C#</span><span>PUZZLE GAME</span></div><button data-detail="game">查看玩法与开发经历</button></article>
+<article class="project-card graduation-card"><a class="demo-cover" href="https://www.bilibili.com/video/BV1LcApepE9x/" target="_blank" rel="noopener noreferrer" aria-label="观看 What's behind the door 毕业设计 Demo"><img src="assets/whats-behind-the-door.jpg" alt="What's behind the door 游戏中的昏暗房间与台灯" width="1920" height="1080" loading="lazy"><span>DEMO FILM · 12:00</span></a><div class="graduation-copy"><span class="project-index">05 / GRADUATION PROJECT</span><h3>What's behind the door</h3><p>第一人称恐怖解谜毕业设计。玩家在不断循环的走廊中探索，随着前进逐步揭示背后的故事。</p><div class="station-tags"><span>UNITY</span><span>FIRST-PERSON PUZZLE</span></div><div class="graduation-links"><a class="text-link" href="https://www.bilibili.com/video/BV1LcApepE9x/" target="_blank" rel="noopener noreferrer">观看毕业设计 Demo</a></div></div></article>
+</div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">03 / RESEARCH</span><h2>研究论文</h2></div><div class="section-content">
+<article class="paper-item"><span class="paper-status published">已发表 · CHI 2026 Extended Abstracts</span><h3>Co-Designing AI Standardized Patients</h3><div class="paper-meta">第一作者 · 12 名医学生访谈 / 3 场共创工作坊</div><a class="text-link" href="https://doi.org/10.1145/3772363.3798336" target="_blank" rel="noopener noreferrer">阅读论文</a></article>
+<article class="paper-item"><span class="paper-status">arXiv 预印本 · CHI 2027 已投稿</span><h3>On Edge in the Dental Chair</h3><div class="paper-meta">第一作者 · 牙科焦虑干预 VR / 24 人随机研究</div><a class="text-link" href="https://arxiv.org/abs/2609.15867" target="_blank" rel="noopener noreferrer">阅读预印本</a></article>
+<article class="paper-item"><span class="paper-status">arXiv 预印本</span><h3>MTalk-Bench</h3><div class="paper-meta">第二作者 · 多轮语音理解评测</div><a class="text-link" href="https://arxiv.org/abs/2508.18240" target="_blank" rel="noopener noreferrer">阅读预印本</a></article>
+</div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">04 / EXPERIENCE</span><h2>研究与实习</h2></div><div class="section-content">
+<article class="experience-item"><div class="item-header"><h3>香港中文大学（深圳）</h3><time>2025.03 — 至今</time></div><div class="item-sub">黄建华、王本友教授课题组<br>研究助理（2025.03–09） / MPhil 在读研究（2025.09–至今）</div><p>开发 AI 智慧校园图灵测试小程序，为已录用会议论文提供 200+ 用户数据。参与 AI 标准化病人研究，分析并提炼 6 类需求与 6 项设计要求。</p></article>
+<article class="experience-item"><div class="item-header"><h3>Struct Game Studio</h3><time>2024.08 — 2024.10</time></div><div class="item-sub">游戏设计实习生 · 吉隆坡</div><p>完成跨文化主题的 3 个关卡调研、机制与流程设计，跟进评审迭代；开发、测试计算机视觉解谜原型。</p></article>
+</div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">05 / EDUCATION</span><h2>教育背景</h2></div><div class="section-content">
+<article class="education-item"><div class="item-header"><h3>香港中文大学（深圳）</h3><time>2025.09 — 2027.07（预计）</time></div><div class="item-sub">人工智能 · 哲学硕士（MPhil） / GPA 3.48 / 4.0</div><p>研究方向：LLM / HCI、语音模型评测与生成。</p></article>
+<article class="education-item"><div class="item-header"><h3>厦门大学马来西亚分校</h3><time>2021.09 — 2025.06</time></div><div class="item-sub">数字媒体技术 · 工学学士 / GPA 3.40 / 4.0 · 专业前 25%</div><p>年度奖学金（2022、2023）；全国大学生数学建模竞赛二等奖（2023）；MCM 荣誉奖（2023）；中国国际“互联网+”大学生创新创业大赛铜奖。</p></article>
+</div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">06 / EARLY EXPLORATIONS</span><h2>早期创作</h2><p class="section-note">从桌游、动画到交互原型。<br>本科作品集选摘。</p><a class="text-link" href="assets/Hubery-Portfolio.pdf" target="_blank" rel="noopener">查看完整作品集 · 14 MB</a></div><div class="section-content project-grid">
+<article class="project-card archive-card"><img class="archive-art" src="assets/horus-boardgame-photo.jpg" alt="桌游《逃离荷鲁斯金字塔》的实体棋盘、卡牌和骰子" width="1080" height="720" loading="lazy"><span class="project-index">BOARD GAME</span><h3>逃离荷鲁斯金字塔</h3><p>合作策略桌游。4 名玩家与 1 名主持人共同参与，在限时逃脱中协作解谜、战斗与收集钥匙。</p><button data-detail="early">查看早期创作</button></article>
+<article class="project-card archive-card"><img class="archive-art contain-art" src="assets/lets-recycle-prototype.png" alt="Let's Recycle 垃圾回收教育交互原型界面" width="1080" height="720" loading="lazy"><span class="project-index">INTERACTION PROTOTYPE</span><h3>Let's Recycle!</h3><p>以 Figma 制作垃圾回收教育原型，通过界面与交互流程探索垃圾分类学习。</p><button data-detail="early">查看交互与动画作品</button></article>
+</div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">07 / TOOLKIT</span><h2>技术与方法</h2></div><div class="section-content skill-grid"><div class="skill-group"><h3>AI & Data</h3><p>Python / PyTorch / Transformers<br>微调 / RAG / Prompt<br>模型部署、评测与数据质检</p></div><div class="skill-group"><h3>Game & Interaction</h3><p>Unity / C# / C / C++<br>Quest 3 / OpenCV<br>关卡设计与 VR 原型</p></div><div class="skill-group"><h3>Research & Design</h3><p>用户访谈 / 参与式设计<br>用户研究 / 模型评测<br>英语技术交流与写作</p></div></div></section>
+<section class="resume-section"><div class="section-heading"><span class="eyebrow">08 / NEXT CHAPTER</span><h2>保持联系</h2></div><div class="section-content"><div class="contact-copy"><a class="contact-line" href="mailto:guo176797@gmail.com">guo176797@gmail.com</a><button class="copy-button" data-copy="guo176797@gmail.com">复制邮箱</button></div><p>期待一起把人的需求、AI 的能力与游戏体验连接起来。</p><div class="link-row"><a class="text-link" href="assets/Hubery-CV.pdf" download="Hubery-CV.pdf">下载 PDF 简历</a><a class="text-link" href="assets/Hubery-Portfolio.pdf" target="_blank" rel="noopener">本科作品集</a><a class="text-link" href="https://space.bilibili.com/35953087" target="_blank" rel="noopener noreferrer">B 站</a><a class="text-link" href="https://github.com/HuberyGG" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></section>
+</div>
+  <footer class="resume-footer"><span>© 2026 Hubery · 朱果</span><span>Human-centered. AI-powered. Playfully built.</span><a href="#play" class="back-to-game">回到游戏</a></footer>
+</section>
+</main>
+<dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-top"><span class="eyebrow" id="detail-eyebrow"></span><button id="close-dialog" aria-label="关闭详情">×</button></div><div class="dialog-body" id="detail-body"></div><div class="dialog-bottom"><span>每段经历，都通向下一个问题。</span><button id="continue-game" class="button button-light">继续探索</button></div></dialog>
+<noscript><style>.game-view{display:none}.resume-view[hidden]{display:block!important}#mode-toggle,.back-to-game,.copy-button,.project-card button{display:none}.resume-intro{padding-top:0}</style></noscript>
+</body></html>
