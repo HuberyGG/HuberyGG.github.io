@@ -47,3 +47,13 @@ Silkscreen 字体来自 Google Fonts 项目，字体文件在本地提供，授�
 - 雪山之巅 / Unity 环境展示：个人地编作品，参考老君山，风雪等特效素材来自 Unity Asset Store；视频为 `BV1owAoeUEAU`。
 
 三张视频封面与简介均来自作者 Hu6ery（UID 35953087）的 B 站公开视频资料。页面显示的视频时长采用 B 站播放器数据。作品归属与外部素材来源按原始说明保留。
+
+### 研究项目配图
+
+所有图片从作者提供的论文中直接提取或渲染，保留原始内容与图中标签；页面保持原图比例，并提供高清查看入口。未将所提供的研究 PDF 整体上传。
+
+- `#dental-vr`：`dental-vr-overview.png` 为《On Edge in the Dental Chair》Figure 1（PDF 第 3 页）；`dental-vr-scenes.png` 为 Figure 3（第 13 页）。随机研究在模拟牙科环境中开展；保留预印本 / CHI 2027 已投稿状态。
+- `#turing-test`：`human-or-machine-platform.png` 为《Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction》Figure 9（PDF 第 22 页）；`human-or-machine-interface.png` 为 Figure 3（第 5 页）。200+ 用户数据来自个人简历的贡献描述，不与论文整体样本量混同。
+- `#aisp`：`aisp-concept-workflow.png` 为《Co-Designing AI Standardized Patients》Figure 1（PDF 第 1 页）。这是共创研究提出的概念流程，不表示已部署系统。12 名医学生同时参与访谈及 3 场工作坊。
+- AISP 与牙科焦虑论文的作者页均标注 equal contribution，网站据此写为“共同第一作者”；牙科论文为列首，AISP 为并列第一作者中的第二位。
+- `#mtalk-bench`：同时提供官方项目主页、Hugging Face 数据集和预印本入口。官方作者列表在两位同等贡献作者后列 Guo Zhu，网站使用“共同作者”避免名次歧义。
