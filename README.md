@@ -48,12 +48,20 @@ Silkscreen 字体来自 Google Fonts 项目，字体文件在本地提供，授�
 
 三张视频封面与简介均来自作者 Hu6ery（UID 35953087）的 B 站公开视频资料。页面显示的视频时长采用 B 站播放器数据。作品归属与外部素材来源按原始说明保留。
 
-### 研究项目配图
+### 项目与研究论文配图
 
-所有图片从作者提供的论文中直接提取或渲染，保留原始内容与图中标签；页面保持原图比例，并提供高清查看入口。未将所提供的研究 PDF 整体上传。
+图片按原比例展示，可点击查看完整图面。论文图片从作者提供的 PDF 或官方论文中提取，未重绘；本轮研究 PDF 未整体上传。
 
-- `#dental-vr`：`dental-vr-overview.png` 为《On Edge in the Dental Chair》Figure 1（PDF 第 3 页）；`dental-vr-scenes.png` 为 Figure 3（第 13 页）。随机研究在模拟牙科环境中开展；保留预印本 / CHI 2027 已投稿状态。
-- `#turing-test`：`human-or-machine-platform.png` 为《Human or Machine? A Preliminary Turing Test for Speech-to-Speech Interaction》Figure 9（PDF 第 22 页）；`human-or-machine-interface.png` 为 Figure 3（第 5 页）。200+ 用户数据来自个人简历的贡献描述，不与论文整体样本量混同。
-- `#aisp`：`aisp-concept-workflow.png` 为《Co-Designing AI Standardized Patients》Figure 1（PDF 第 1 页）。这是共创研究提出的概念流程，不表示已部署系统。12 名医学生同时参与访谈及 3 场工作坊。
-- AISP 与牙科焦虑论文的作者页均标注 equal contribution，网站据此写为“共同第一作者”；牙科论文为列首，AISP 为并列第一作者中的第二位。
-- `#mtalk-bench`：同时提供官方项目主页、Hugging Face 数据集和预印本入口。官方作者列表在两位同等贡献作者后列 Guo Zhu，网站使用“共同作者”避免名次歧义。
+项目经历：
+
+- `#dental-vr` 展示 `dental-vr-scenes.png`：《On Edge in the Dental Chair》Figure 3，第 13 页的五类场景与实际系统交互图。论文卡使用 Figure 1。
+- `#turing-test` 使用作者本次指定的原始截图 `turing-platform-selected.png`，内容为 Human or Machine? 的 Figure 9。图片原样复制；200+ 用户数据仍按个人简历描述。
+- `#aisp` 保留独立共创项目，使用论文 Figure 1 概念流程图；不表述为已部署系统。
+- MTalk-Bench 与 HealthTTS 仅放在“研究论文”，不再作为项目卡重复展示。
+
+研究论文共四篇，全部使用各自第一幅图：
+
+- AISP：`aisp-concept-workflow.png`，Figure 1，第 1 页；共同第一作者，CHI 2026 Extended Abstracts 已发表。
+- On Edge in the Dental Chair：`dental-vr-overview.png`，Figure 1，第 3 页；共同第一作者（列首），arXiv 预印本 / CHI 2027 已投稿。24 人研究在模拟环境中开展。
+- MTalk-Bench：`mtalk-bench-figure-1.png`，官方 arXiv v2 第 2 页 Figure 1。保留官方项目主页、Hugging Face 数据集及预印本入口；作者身份使用“共同作者”。
+- HealthTTS：`healthtts-figure-1.png`，作者提供的《HealthTTS: Symptom-Aware Text-to-Speech with Clinical Acoustic Cues》第 2 页 Figure 1，直接提取原始 1312×837 像素图片。标注“在投论文”；匿名稿不用于推断作者排名。替换旧 MedTTS 描述，不沿用旧的说话人数、小时数或后期事件插入作为最终方法。
