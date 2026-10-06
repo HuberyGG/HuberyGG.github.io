@@ -75,7 +75,7 @@ Silkscreen 字体来自 Google Fonts 项目，字体文件在本地提供，授�
 
 - `#dental-vr` 展示 `dental-vr-scenes.png`：《On Edge in the Dental Chair》Figure 3，第 13 页的五类场景与实际系统交互图。论文卡使用 Figure 1。
 - `#turing-test` 使用作者本次指定的原始截图 `turing-platform-selected.png`，内容为 Human or Machine? 的 Figure 9。图片原样复制；200+ 用户数据仍按个人简历描述。
-- `#aisp` 保留独立共创项目，使用论文 Figure 1 概念流程图；不表述为已部署系统。
+- AISP 仅保留在研究论文 `#paper-aisp`，旧链接 `#aisp` 同样定位到论文条目。
 - MTalk-Bench 与 HealthTTS 仅放在“研究论文”，不再作为项目卡重复展示。
 
 研究论文共四篇，全部使用各自第一幅图：
