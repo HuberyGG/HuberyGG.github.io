@@ -80,5 +80,5 @@ Silkscreen 字体来自 Google Fonts 项目，字体文件在本地提供，授�
 
 - AISP：`aisp-concept-workflow.png`，Figure 1，第 1 页；第一作者，CHI 2026 Extended Abstracts 已发表。
 - On Edge in the Dental Chair：`dental-vr-overview.png`，Figure 1，第 3 页；第一作者，arXiv 预印本 / CHI 2027 已投稿。24 人研究在模拟环境中开展。
-- MTalk-Bench：`mtalk-bench-figure-1.png`，官方 arXiv v2 第 2 页 Figure 1。保留官方项目主页、Hugging Face 数据集及预印本入口；作者身份使用“共同作者”。
-- HealthTTS：`healthtts-figure-1.png`，作者提供的《HealthTTS: Symptom-Aware Text-to-Speech with Clinical Acoustic Cues》第 2 页 Figure 1，直接提取原始 1312×837 像素图片。标注“在投论文”；匿名稿不用于推断作者排名。替换旧 MedTTS 描述，不沿用旧的说话人数、小时数或后期事件插入作为最终方法。
+- MTalk-Bench：`mtalk-bench-figure-1.png`，官方 arXiv v2 第 2 页 Figure 1。保留官方项目主页、Hugging Face 数据集及预印本入口；作者身份使用“第三作者”。
+- HealthTTS：`healthtts-figure-1.png`，作者提供的《HealthTTS: Symptom-Aware Text-to-Speech with Clinical Acoustic Cues》第 2 页 Figure 1，直接提取原始 1312×837 像素图片。按作者提供的信息标注“ICLR 2027 在投”和“第三作者”。
