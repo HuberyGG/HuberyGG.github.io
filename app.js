@@ -1,5 +1,13 @@
 (() => {
   'use strict';
+  const fallbackText = {
+    allWorks: total => `共 ${total} 件作品`, filteredWorks: (visible, total) => `显示 ${visible} / ${total} 件作品`,
+    emailCopied: '邮箱已复制', emailFallback: '请长按或选中邮箱地址复制'
+  };
+  const text = (key, ...args) => {
+    if (window.HuberyI18n) return window.HuberyI18n.t(key, ...args);
+    return typeof fallbackText[key] === 'function' ? fallbackText[key](...args) : fallbackText[key];
+  };
   const directory = document.querySelector('.page-directory');
   const panel = directory.querySelector('.directory-panel');
   const toggle = directory.querySelector('.directory-toggle');
@@ -37,6 +45,15 @@
     for (const link of links) {
       if (link.hash === `#${active}`) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
+    }
+    const activeHeaderLink = document.querySelector('.site-nav a[aria-current]');
+    const headerNav = document.querySelector('.site-nav');
+    if (active === 'home') headerNav.scrollLeft = 0;
+    if (activeHeaderLink && headerNav.scrollWidth > headerNav.clientWidth) {
+      const navRect = headerNav.getBoundingClientRect();
+      const linkRect = activeHeaderLink.getBoundingClientRect();
+      if (linkRect.left < navRect.left) headerNav.scrollLeft += linkRect.left - navRect.left;
+      if (linkRect.right > navRect.right) headerNav.scrollLeft += linkRect.right - navRect.right;
     }
     const index = targets.findIndex(target => target.id === active);
     currentLabel.textContent = directoryLinks[index].textContent;
@@ -99,6 +116,7 @@
   window.addEventListener('load', scheduleNavigation);
   window.addEventListener('hashchange', () => { setRequestedSection(location.hash); scheduleNavigation(); });
   window.addEventListener('pageshow', scheduleNavigation);
+  document.addEventListener('languagechange', syncHeaderHeight);
   wideScreen.addEventListener('change', syncDirectoryLayout);
   new ResizeObserver(syncHeaderHeight).observe(header);
   document.fonts.ready.then(scheduleNavigation);
@@ -107,11 +125,14 @@
   updateNavigation();
   const copyButton = document.querySelector('[data-copy]');
   const status = document.querySelector('.copy-status');
+  let copyState = null;
+  document.addEventListener('languagechange', () => { if (copyState) status.textContent = text(copyState); });
   if (navigator.clipboard?.writeText) {
     copyButton.hidden = false;
     copyButton.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(copyButton.dataset.copy); status.textContent = '邮箱已复制'; }
-      catch { status.textContent = '请长按或选中邮箱地址复制'; }
+      try { await navigator.clipboard.writeText(copyButton.dataset.copy); copyState = 'emailCopied'; }
+      catch { copyState = 'emailFallback'; }
+      status.textContent = text(copyState);
     });
   }
   const galleryFilters = document.querySelector('.gallery-filters');
@@ -119,18 +140,22 @@
     const buttons = [...galleryFilters.querySelectorAll('[data-work-filter]')];
     const cards = [...document.querySelectorAll('#creative-gallery [data-work-category]')];
     const count = document.querySelector('.gallery-count');
+    let selectedCategory = 'all';
     function filterWorks(category) {
+      selectedCategory = category;
       let visible = 0;
       for (const card of cards) {
         card.hidden = category !== 'all' && card.dataset.workCategory !== category;
         if (!card.hidden) visible++;
       }
       for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.workFilter === category));
-      count.textContent = category === 'all' ? `共 ${visible} 件作品` : `显示 ${visible} / ${cards.length} 件作品`;
+      count.textContent = category === 'all' ? text('allWorks', visible) : text('filteredWorks', visible, cards.length);
       updateNavigation();
     }
     for (const button of buttons) button.addEventListener('click', () => filterWorks(button.dataset.workFilter));
     galleryFilters.hidden = false;
+    filterWorks('all');
+    document.addEventListener('languagechange', () => filterWorks(selectedCategory));
     window.addEventListener('hashchange', () => {
       const target = document.getElementById(location.hash.slice(1));
       const card = target?.closest('[data-work-category]');
